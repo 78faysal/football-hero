@@ -35,14 +35,15 @@ body {
 }
 
 /* ********************* players section ********************* */
-.players-section{
+.players-section {
     background-image: linear-gradient(to right, #5a73a1, #B1BFD8);
-    
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 5rem;
 }
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -88,27 +89,30 @@ button:hover {
 
 /*********************** selection section ***********************/
 
-.budget-card{
+.budget-card {
     color: rgb(255, 255, 255);
     background-color: rgb(35, 35, 35);
     padding: 2rem;
 }
 
-.budget-card div{
+.budget-card h2 {
+    text-align: center;
+}
+
+.budget-card div {
     display: flex;
     gap: 10px;
     justify-content: space-between;
     align-items: center;
 }
 
-.budget-card button{
-    display: flex;
-    justify-content: center;
+.budget-card button {
+    width: 100%;
 }
-
 
 .budget-card div input {
     background-color: transparent;
+    color: white;
     width: 6rem;
     height: 2rem;
     border: 2px solid white;
