@@ -5,6 +5,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* ******************** banner section *********************** */
 .banner {
     background-image: url("images/banner.jpg");
     background-size: cover;
@@ -14,51 +15,164 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
-  }
-  
-  .banner-content {
+}
+
+.banner-content {
     max-width: 800px;
     text-align: center;
-  }
-  
-  .banner h1 {
+}
+
+.banner h1 {
     font-size: 48px;
     font-weight: bold;
     text-shadow: 2px 1px #000;
     margin-bottom: 20px;
-  }
-  
-  .banner p {
+}
+
+.banner p {
     font-size: 18px;
     line-height: 1.5;
-  }
-  
-  /* Media Queries */
-  @media screen and (max-width: 768px) {
+}
+
+/* ********************* players section ********************* */
+.players-section{
+    background-image: linear-gradient(to right, #5a73a1, #B1BFD8);
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5rem;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.card {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #215fa1;
+}
+
+/*********************** selection section ***********************/
+
+.budget-card{
+    color: rgb(255, 255, 255);
+    background-color: rgb(35, 35, 35);
+    padding: 2rem;
+}
+
+.budget-card div{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.budget-card button{
+    display: flex;
+    justify-content: center;
+}
+
+
+.budget-card div input {
+    background-color: transparent;
+    width: 6rem;
+    height: 2rem;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+
+/* Media Queries */
+
+/*********************** banner section ***********************/
+
+@media screen and (max-width: 768px) {
     .banner {
-      height: 300px;
+        height: 300px;
     }
-    
+
     .banner h1 {
-      font-size: 36px;
+        font-size: 36px;
     }
-    
+
     .banner p {
-      font-size: 20px;
+        font-size: 20px;
     }
-  }
-  
-  @media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 576px) {
     .banner {
-      height: 200px;
+        height: 200px;
     }
-    
+
     .banner h1 {
-      font-size: 24px;
+        font-size: 24px;
     }
-    
+
     .banner p {
-      font-size: 16px;
+        font-size: 16px;
     }
-  }
-  
+}
+
+
+.image-container {
+    width: 200px;
+    /* desired width */
+    height: 200px;
+    /* desired height */
+    overflow: hidden;
+    /* hide the overflow */
+}
+
+.image-container img {
+    width: 100%;
+    /* set the width to 100% of the container */
+    height: auto;
+    /* preserve aspect ratio */
+    display: block;
+    /* remove any whitespace */
+}
+
+
+/* **************** players section ****************** */
+
+
+@media (max-width: 768px) {
+    .card {
+        flex-basis: calc(50% - 20px);
+    }
+}
