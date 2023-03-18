@@ -1,8 +1,14 @@
-const cardContainer = document.getElementsByClassName('selected-card')
-const selectButton = document.getElementsByClassName('selectBtn')
-const cardCollection = document.getElementsByClassName('card');
+const cardBtns = document.querySelectorAll('.selectBtn');
 
-function handleOnClick() {
-    const cardValue = cardCollection
-    console.log(cardValue)
-}
+Object.keys(cardBtns).forEach((key, index) => {
+    cardBtns[key].addEventListener('click', () => {
+        console.log('clicked')
+    });
+});
+
+
+
+document.getElementById('player-expenses').addEventListener('click', function () {
+    const playerValue = document.getElementById('player-expenses-input').value;
+    console.log(playerValue)
+})
