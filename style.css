@@ -60,7 +60,8 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     color: rgb(241, 239, 255);
 }
-.card button{
+
+.card button {
     width: 80%;
 }
 
@@ -130,7 +131,19 @@ button:hover {
     padding: 2rem;
     margin-bottom: 2rem;
 }
-.selected-card h2{
+
+.selected-card h2 {
+    text-align: center;
+}
+
+
+
+/*********************** Footer section ***********************/
+footer {
+    background-color: #537895;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -169,20 +182,14 @@ button:hover {
 
 .image-container {
     width: 200px;
-    /* desired width */
     height: 200px;
-    /* desired height */
     overflow: hidden;
-    /* hide the overflow */
 }
 
 .image-container img {
     width: 100%;
-    /* set the width to 100% of the container */
     height: auto;
-    /* preserve aspect ratio */
     display: block;
-    /* remove any whitespace */
 }
 
 
@@ -190,6 +197,10 @@ button:hover {
 
 
 @media (max-width: 768px) {
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
     .card {
         flex-basis: calc(50% - 20px);
     }
